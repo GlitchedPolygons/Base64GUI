@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Base64GUI.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="30,0" VerticalOptions="Center">
+
+            <VerticalStackLayout>
+
+                <HorizontalStackLayout VerticalOptions="Center">
+
+                    <CheckBox x:Name="CheckBoxUrlEncoded" />
+
+                    <Label Text="URL Encoded" />
+
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout VerticalOptions="Center">
+
+                    <CheckBox x:Name="CheckBoxEncodeReplaceCRLFWithLF" IsChecked="true" />
+
+                    <Label Text="Replace CRLF line endings with LF for encoding" />
+
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout VerticalOptions="Center">
+
+                    <CheckBox x:Name="CheckBoxDecodeReplaceCRLFWithLF" IsChecked="false" />
+
+                    <Label Text="Replace CRLF line endings with LF for decoding" />
+
+                </HorizontalStackLayout>
+
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+                
+                <Label Text="Input:" />
+                
+                <Editor x:Name="EditorInput" Placeholder="Enter your input string here!" MinimumHeightRequest="200" />
+                
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+
+                <Label Text="Output:" />
+
+                <Editor x:Name="EditorOutput" Placeholder="This is the output field. Results will be fed into this field." MinimumHeightRequest="200" />
+                
+            </VerticalStackLayout>
+
+            <HorizontalStackLayout>
+                
+                <Button x:Name="ButtonEncode" Text="Encode" Clicked="OnClickedEncode" HorizontalOptions="Center" />
+                
+                <Button x:Name="ButtonDecode" Text="Decode" Clicked="OnClickedDecode" HorizontalOptions="Center" Margin="8,0,0,0"/>
+                
+            </HorizontalStackLayout>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
